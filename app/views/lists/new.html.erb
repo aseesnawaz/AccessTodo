@@ -1,0 +1,11 @@
+  <h3>Create a new list</h3>
+
+  <form action="<%= lists_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    Title: <input type="text" name="list[title]" value="<%= @list.title %>">
+
+    <input type="submit" value="Create the list">
+  </form>
+  <br>
+  <a href="<%= lists_url %>"> < Back to all</a>

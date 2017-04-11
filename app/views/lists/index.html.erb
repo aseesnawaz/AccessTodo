@@ -1,0 +1,27 @@
+
+
+  <h3><%= @lists.length %> Categories and <%= @items.length %> items, let's get started!</h3>
+
+  <% @lists.each do |list| %>
+  <div class="title">
+    <%=list.title -%><%= button_to "-", list_url(list), method: :delete %>
+  </div>
+
+    <ol>
+    <% @items.each do |item| %>
+      <% if item.list_id == list.id %>
+      <li><%= item.item -%><%= button_to "-", item_url(item), method: :delete %></li>
+      <% end %>
+    <% end %>
+    </ol>
+
+    <form action="<%= items_url %>" method="post">
+      <h4 align=center>+Item <input type="text" name="item[item]">
+      <input type="hidden" name="item[list_id]" value="<%= list.id %>">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="submit" class="addButton" value="+">
+    </h4>
+    </form>
+  <% end %>
+
+  <h4 align=center><a href="<%= new_list_url %>">Create a new list</a></h4>

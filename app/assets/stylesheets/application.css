@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.top{
+  text-align: center;
+  border: 1px black;
+  margin-top: 10px;
+  text-decoration: underline;
+  border-width:5px;
+  border-style:double;
+  border-width: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 43px;
+  background-image: url(internal-background.jpg);
+  background-size:cover;
+}
+
+h3{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.title{
+  text-align: center;
+  text-decoration: underline;
+  display: center;
+  font-size: 130%;
+}
+
+.list{
+  border: 1px black;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  border-style: solid;
+  background-image: url(internal-background.jpg);
+  background-size: cover;
+}
+
+.fullpage{
+  background-image: url(background.jpg);
+  background-size: cover;
+}
+
+.gif{
+    width: auto;
+    height: 42px;
+    float: left;
+}
+
+.add{
+     color:#050;
+     font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+     background-color:#01FF70;
+     border:1px;
+}
+
+.delete{
+  color: orange;
+  font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+  background-color:#01FF70;
+  border:1px;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Access</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="fullpage">
+
+<div class="top">
+  <% if logged_in? %>
+    <img src="assets/Rainbow-color-animated-hello.gif" alt="Hello" class="gif">
+    <%= current_user.name.capitalize %>
+    <%= button_to "Sign Out", session_url, :method => :delete%>
+  <% else %>
+    <%= link_to "Sign In", new_session_url %>
+    <br>
+    <%= link_to "Sign Up", new_user_url %>
+  <% end %>
+</div>
+<div class="list">
+
+<%= yield %>
+
+
+</div>
+<div class="footer">Copyright © 2017 AccessTodo.</div>
+</body>
+</html>
